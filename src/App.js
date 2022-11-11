@@ -1,7 +1,12 @@
 import "./App.css";
+import NativeForm from "./components/NativeForm/NativeForm";
 
 function App() {
-  return <div className="App">Hello</div>;
+  return (
+    <div>
+      <NativeForm />
+    </div>
+  );
 }
 
 export default App;

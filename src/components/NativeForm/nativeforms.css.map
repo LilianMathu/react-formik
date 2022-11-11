@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,eAAe,CAAC;EACd,MAAM,EAAE,WAAW;EACnB,OAAO,EAAE,IAAI;EACb,WAAW,EAAE,MAAM;EACnB,eAAe,EAAE,MAAM;EACvB,cAAc,EAAE,MAAM;CAQvB;;AAbD,AAME,eANa,CAMb,GAAG,CAAC;EACF,aAAa,EAAE,IAAI;CACpB;;AARH,AASE,eATa,CASb,KAAK,CAAC;EACJ,OAAO,EAAE,YAAY;EACrB,KAAK,EAAE,KAAK;CACb",
+    "sources": [
+        "nativeforms.scss"
+    ],
+    "names": [],
+    "file": "nativeforms.css"
+}
