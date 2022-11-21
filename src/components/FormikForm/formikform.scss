@@ -17,7 +17,6 @@ input {
   border: 1px solid #ccc;
   border-radius: 5px;
   background-color: aliceblue;
-  margin-bottom: 20px;
   font-size: 14px;
   padding: 8px 14px;
 }
@@ -31,4 +30,14 @@ button {
   margin-top: 1.5rem;
   font-size: large;
   font-weight: bold;
+}
+
+.form-control {
+  margin-bottom: 20px;
+}
+
+.form-errors {
+  margin-top: 5px;
+  text-align: left;
+  color: red;
 }

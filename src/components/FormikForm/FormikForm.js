@@ -38,23 +38,27 @@ const FormikForm = () => {
     validate,
   });
 
+  console.log("Errors", formik.errors);
+
   return (
     <div className="form">
       <h1>Register</h1>
       <form onSubmit={formik.handleSubmit}>
-        <div>
+        <div className="form-control">
           <label htmlFor="name">Name</label>
           <input
             type="text"
             name="name"
             id="name"
-            x
             value={formik.values.name}
             onChange={formik.handleChange}
           />
+          {formik.errors.name && (
+            <div className="form-errors">{formik.errors.name}</div>
+          )}
         </div>
 
-        <div>
+        <div className="form-control">
           <label htmlFor="email">Email</label>
           <input
             type="email"
@@ -63,9 +67,12 @@ const FormikForm = () => {
             value={formik.values.email}
             onChange={formik.handleChange}
           />
+          {formik.errors.email && (
+            <div className="form-errors">{formik.errors.email}</div>
+          )}
         </div>
 
-        <div>
+        <div className="form-control">
           <label htmlFor="password">Password</label>
           <input
             type="password"
@@ -74,6 +81,9 @@ const FormikForm = () => {
             value={formik.values.password}
             onChange={formik.handleChange}
           />
+          {formik.errors.password && (
+            <div className="form-errors">{formik.errors.password}</div>
+          )}
         </div>
         <div>
           <button type="submit">Submit</button>
