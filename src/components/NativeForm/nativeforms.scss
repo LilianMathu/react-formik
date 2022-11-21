@@ -1,14 +1,33 @@
 .form-container {
-  height: fit-content;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  div {
-    margin-bottom: 10px;
-  }
-  label {
-    display: inline-block;
-    width: 150px;
-  }
+  display: block;
+  text-align: center;
+}
+
+label {
+  font-weight: bold;
+  text-align: left;
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 400px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.4258;
+  color: #555;
+  background-color: aliceblue;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: rgb(92, 175, 99);
+  color: white;
+  padding: 15px 32px;
+  border: none;
+  border-radius: 5px;
+  display: inline-block;
+  font-weight: 600;
 }

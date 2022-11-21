@@ -1,10 +1,12 @@
 import "./App.css";
-import NativeForm from "./components/NativeForm/NativeForm";
+import FormikForm from "./components/FormikForm/FormikForm";
+// import NativeForm from "./components/NativeForm/NativeForm";
 
 function App() {
   return (
-    <div>
-      <NativeForm />
+    <div className="App">
+      {/* <NativeForm /> */}
+      <FormikForm />
     </div>
   );
 }

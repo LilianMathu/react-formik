@@ -37,8 +37,8 @@ const NativeForm = () => {
   };
 
   return (
-    <>
-      <form className="form-container" onSubmit={handleSubmit}>
+    <div className="form-container">
+      <form onSubmit={handleSubmit}>
         <h1>Register</h1>
 
         <div>
@@ -77,7 +77,7 @@ const NativeForm = () => {
       {submitted && (
         <div class="success-message">Success! Thank you for registering</div>
       )}
-    </>
+    </div>
   );
 };
 
