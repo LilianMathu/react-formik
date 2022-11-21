@@ -1,16 +1,41 @@
 import { useFormik } from "formik";
 import "./formikform.scss";
 
+const initialValues = {
+  name: "",
+  email: "",
+  password: "",
+};
+
+const onSubmit = (values) => {
+  console.log(values);
+};
+
+const validate = (values) => {
+  let errors = {};
+
+  if (!values.name) {
+    errors.name = "Required!";
+  }
+
+  if (!values.email) {
+    errors.email = "Required!";
+  } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
+    errors.email = "Invalid email format!";
+  }
+
+  if (!values.password) {
+    errors.password = "Required!";
+  }
+
+  return errors;
+};
+
 const FormikForm = () => {
   const formik = useFormik({
-    initialValues: {
-      name: "",
-      email: "",
-      password: "",
-    },
-    onSubmit: (values) => {
-      console.log(values);
-    },
+    initialValues,
+    onSubmit,
+    validate,
   });
 
   return (
@@ -23,6 +48,7 @@ const FormikForm = () => {
             type="text"
             name="name"
             id="name"
+            x
             value={formik.values.name}
             onChange={formik.handleChange}
           />
