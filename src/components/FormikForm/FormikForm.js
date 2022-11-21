@@ -8,12 +8,15 @@ const FormikForm = () => {
       email: "",
       password: "",
     },
+    onSubmit: (values) => {
+      console.log(values);
+    },
   });
 
   return (
     <div className="form">
       <h1>Register</h1>
-      <form action="">
+      <form onSubmit={formik.handleSubmit}>
         <div>
           <label htmlFor="name">Name</label>
           <input
@@ -47,7 +50,7 @@ const FormikForm = () => {
           />
         </div>
         <div>
-          <button>Submit</button>
+          <button type="submit">Submit</button>
         </div>
       </form>
     </div>
