@@ -38,7 +38,7 @@ const FormikForm = () => {
     validate,
   });
 
-  console.log("Errors", formik.errors);
+  console.log("Visited", formik.touched);
 
   return (
     <div className="form">
@@ -52,10 +52,11 @@ const FormikForm = () => {
             id="name"
             value={formik.values.name}
             onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
           />
-          {formik.errors.name && (
+          {formik.touched.name && formik.errors.name ? (
             <div className="form-errors">{formik.errors.name}</div>
-          )}
+          ) : null}
         </div>
 
         <div className="form-control">
@@ -66,10 +67,11 @@ const FormikForm = () => {
             id="email"
             value={formik.values.email}
             onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
           />
-          {formik.errors.email && (
+          {formik.touched.email && formik.errors.email ? (
             <div className="form-errors">{formik.errors.email}</div>
-          )}
+          ) : null}
         </div>
 
         <div className="form-control">
@@ -80,10 +82,11 @@ const FormikForm = () => {
             id="password"
             value={formik.values.password}
             onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
           />
-          {formik.errors.password && (
+          {formik.touched.password && formik.errors.password ? (
             <div className="form-errors">{formik.errors.password}</div>
-          )}
+          ) : null}
         </div>
         <div>
           <button type="submit">Submit</button>
